@@ -48,7 +48,11 @@ After differential processing and white noise test, there is a stationary non-wh
 - MA(1) process has ACF cut off at lag=1 and PACF tailing out, 
 - MA(2) process has ACF cut off at lag=2 and PACF tailing out. 
 
-According to the plot, it can be a bit confusing, so I use smt.graphics.plot_acf() and visualize it to find the best order for p and q. 
+According to the plot, it can be a bit confusing, so I use asmt.ARMA().fit() to fit the model and use a loop to find the best order to fit the ARMA model by comparing the AIC which got by tmp_mdl.aic.
+
+(the code of the loop)
 
 
-Then I got the ARIMA model. 
+Then I got the ARMA model. 
+
+Next step of getting a model is to predict. I chose library **Prophet** from **fbprophet**, which is an easy tool to predict the time series. Here is the result. 
