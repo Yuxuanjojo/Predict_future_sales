@@ -46,7 +46,7 @@ As I am going to analyze the sale for the whole stores, I am going to group by t
 To predict a time series, I consider the ARIMA model. So the mind map should be like:
 
 <p align="center">
-  <img src="" width="400px">    
+  <img src="https://github.com/Yuxuanjojo/Predict_future_sales/blob/main/img_predict/flowchart.png?raw=true" width="250px">    
 </p>  
 
 **ADF test** is used to check whether the time series is stable. When the test statistic value is smaller than critical value (5%), there would be 95% possibility the time series is stationary. If not, take **differential processing** to deal with the time series to get a new time series, after once or several times differential processing until the new time series is stationary. Here, adfuller.() is a meaningful method for us to check whether this is a stationary time series.     
